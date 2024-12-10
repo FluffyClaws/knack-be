@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "7d58047b-6ab5-4eb2-96c8-5c58feceed0d",
+		"name": "knack.be",
+		"description": "brief guide:  \n[https://www.notion.so/Test-Article-Parser-Selectors-1230a865881e80978b12e21604a1a2c1](https://www.notion.so/Test-Article-Parser-Selectors-1230a865881e80978b12e21604a1a2c1)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28959184"
+	},
+	"item": [
+		{
+			"name": "knack.be",
+			"item": [
+				{
+					"name": "knack.be_selectors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Validate textStringLength > 200\", function () {\r",
+									"//     const response = pm.response.json();\r",
+									"//     pm.expect(response.data.textStringLength).to.be.above(200);\r",
+									"// });\r",
+									"\r",
+									"// pm.test(\"Validate imageItemsCount > 0\", function () {\r",
+									"//     const response = pm.response.json();\r",
+									"//     pm.expect(response.data.imageItemsCount).to.be.above(0);\r",
+									"// });"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\": \"https://www.knack.be/nieuws/wereld/debat-tussen-running-mates-vance-en-walz-een-informatief-gelijkspel/\",\n    \"site\": {\n        \"css_selector\": \".c-picture\",\n        \"css_skip_selector\": null,\n        \"css_text_selector\": null,\n        \"css_image_selector\": null,\n        \"block_selector\": null,\n        \"is_test\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}{{path}}",
+							"host": [
+								"{{base_url}}{{path}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
